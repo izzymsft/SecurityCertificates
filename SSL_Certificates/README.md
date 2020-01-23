@@ -23,21 +23,21 @@ sudo su -
 ### Step 1. Create a directory called ssl_certs
 
 ```shell
-# mkdir ssl_certs
+# mkdir ca_authority
 ```
 
 ### Step 2. Change Directory Permissions
 Change the permissions on the folder to make it accessible only to the root user.
 
 ```shell
-# chmod 0700 ssl_certs
+# chmod 0700 ca_authority
 ```
 
 ### Step 3. Storage Directories for Certificates and Private Keys
 Inside the new directory, create two directories that will be used to store new certificates and private keys
 
 ```shell
-# cd ssl_certs
+# cd ca_authority
 
 # mkdir certs private
 ```
