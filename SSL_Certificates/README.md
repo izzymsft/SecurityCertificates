@@ -20,7 +20,7 @@ sudo su -
 ```
 
 
-### Step 1. Create a directory called ssl_certs
+### Step 1. Create a directory called ca_authority
 
 ```shell
 # mkdir ca_authority
@@ -42,19 +42,13 @@ Inside the new directory, create two directories that will be used to store new 
 # mkdir certs private
 ```
 
-Go back to the ssl_certs directory when you are done
-
-```shell
-# cd ..
-```
-
 ### Step 4. Tracking Issued Certificates
 
 Next we need to keep track of each certificate that is created and signed
 
 The auto-increment serial number will be stored in the file called serial and the certificate database will be stored in a file called certindex.txt
 
-Inside the ssl_certs folder run the following commands
+Inside the ca_authority folder, run the following commands:
 
 ```shell
 # echo '100001' > serial && touch certindex.txt
@@ -62,9 +56,12 @@ Inside the ssl_certs folder run the following commands
 
 ### Step 5. Configuring OpenSSL for Issuing Certs
 
-Create a custom configuration file for openssl to use. Feel free to update its contents to suit you needs.
+Inside the ca_authority directory, create a custom configuration file for openssl to use. Feel free to update its contents to suit you needs.
 
 ```shell
+
+touch openssl.cnf
+
 $ vim openssl.cnf
 ```
 
