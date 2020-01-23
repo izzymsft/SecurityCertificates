@@ -33,3 +33,7 @@ openssl x509 -inform PEM -in input.pem -outform DER -out output.cer
 openssl x509 -inform PEM -in trust.pem -outform DER -out trust.cer
 ```
 
+### Common Commands
+Check out this website for some commands:
+
+https://www.sslshopper.com/article-most-common-openssl-commands.html
