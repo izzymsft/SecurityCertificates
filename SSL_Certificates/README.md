@@ -107,7 +107,7 @@ For each domain name you want to set up, create the key and signing request in o
 ### Step 2. Sign the CSR
 
 ```shell
-
+ openssl ca -config openssl.cnf -out product-api.crt -days 365 -infiles product-api.csr
 # openssl ca -out izzywebsite.crt -days 365 -config ./openssl.cnf -infiles izzywebsite.csr
 ```
 
