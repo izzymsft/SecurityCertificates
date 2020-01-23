@@ -99,7 +99,7 @@ For each domain name you want to set up, create the key and signing request in o
 ### Step 1 - Create the Private Key and CSR
 
 ```shell
-# cd ssl_certs
+# cd ca_authority
 
 # openssl req -new -out izzywebsite.csr -keyout private/izzywebsite.key -days 365 -config ./openssl.cnf
 ```
@@ -107,6 +107,7 @@ For each domain name you want to set up, create the key and signing request in o
 ### Step 2. Sign the CSR
 
 ```shell
+
 # openssl ca -out izzywebsite.crt -days 365 -config ./openssl.cnf -infiles izzywebsite.csr
 ```
 
