@@ -117,3 +117,11 @@ In the example above, these are the files generated and thier significance
 - izzywebsite.key is the Private Key for this Certificate
 - izzywebsite.crt is the SSL certificate that has been signed by the Certificate issuer.
 
+You can place the generator.sh file in your ca_authority folder and use it to generate the certificates in an automated way
+Simply specify the domain name as the first arguement to the ./generator.sh script and follow the prompt
+
+If you need to reset the certificates database, you can execute the ./reset-database.sh script to do so
+
+Info on Additional Commands is available here
+https://www.sslshopper.com/article-most-common-openssl-commands.html
+
