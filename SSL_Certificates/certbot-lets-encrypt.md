@@ -48,3 +48,11 @@ This will generate the public and private certs for the hostname.
 
 Once the cert is generated, we will need to generate the PFX and DER equivalents so that we have it readily-available if needed.
 
+
+```shell
+# Generate the PFX equivalent of the PEM cert
+openssl pkcs12 -export -inkey privkey1.pem -in cert1.pem -out cert1.pfx 
+
+# Generate the DER equivalent of the PEM cert
+openssl x509 -inform PEM -in cert1.pem -outform DER -out cert1.cer
+```
