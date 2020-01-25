@@ -6,6 +6,7 @@ This is a tutorial on how to do the following:
 - Setting Up OpenSSL for Creating Certificates as a Certificate Authority
 - Issuing SSL Certificates
 
+Once your environment is setup to generate the certs, please copy the generator.sh and the reset-database.sh scripts to your ca_authority directory and use them to generate the certs and reset the database as needed. This simplifies the process
 
 ## Setting Up OpenSSL for Creating Certificates as a Certificate Authority
 
