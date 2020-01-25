@@ -34,12 +34,17 @@ If it is not reachable, we need to open up port 80 and 443 at the firewalls or N
 
 Also make sure that the DNS records for all your domains you wish to issue certs for are mapped to the public IP of your VM.
 
-You may need to change the A or CNAME records for the domains/sub-domains
+For the DNS record updates, you may need to change the A or CNAME records for the domains/sub-domains
 
 ### Generating the SSL Certificate from Let's Encrypt using Certbot
 
+Specify the admin email and the FQDN of the hostname you wish to issue the SSL Certificate for
 
 ```shell
 certbot certonly --nginx -m ssl@izzyacademy.com --agree-tos -d sample-domain.izzyacademy.com
-
 ```
+
+This will generate the public and private certs for the hostname.
+
+Once the cert is generated, we will need to generate the PFX and DER equivalents so that we have it readily-available if needed.
+
