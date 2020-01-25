@@ -26,6 +26,15 @@ Install Nginx and Certbot
 sudo apt-get install certbot python-certbot-nginx nginx-full
 ```
 
+### Verify that the Webserver is Reachable from the Internet
+
 Let's make sure that we are able to get to the document root of the Nginx webserver on the Ubuntu machine.
 If it is not reachable, we need to open up port 80 and 443 at the firewalls or Network Security Groups associated with the machine for this to be possible.
 
+### Generating the SSL Certificate from Let's Encrypt using Certbot
+
+
+```shell
+certbot certonly --nginx -m ssl@izzyacademy.com --agree-tos -d sample-domain.izzyacademy.com
+
+```
