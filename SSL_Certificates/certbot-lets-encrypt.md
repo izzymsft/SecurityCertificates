@@ -6,6 +6,7 @@ In this scenario, we are going to use a publicly trust CA Authority (Let's Encry
 The need the following pre-conditions to do this:
 - We need an Ubuntu VM that is reachable on Port 80 from Any IP on the internal (from Let's Encrypt).
 - We need Certbot to be installed on the VM
+- All the Domains or Sub-Domains you need to Issue SSL Certs for should map to the Public IP of the Linux VM 
 
 ### Installing Certbot and Nginx
 
@@ -30,6 +31,10 @@ sudo apt-get install certbot python-certbot-nginx nginx-full
 
 Let's make sure that we are able to get to the document root of the Nginx webserver on the Ubuntu machine.
 If it is not reachable, we need to open up port 80 and 443 at the firewalls or Network Security Groups associated with the machine for this to be possible.
+
+Also make sure that the DNS records for all your domains you wish to issue certs for are mapped to the public IP of your VM.
+
+You may need to change the A or CNAME records for the domains/sub-domains
 
 ### Generating the SSL Certificate from Let's Encrypt using Certbot
 
